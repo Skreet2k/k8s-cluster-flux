@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: zipkin-deployment
+  namespace: zipkin
+  labels:
+    app: zipkin
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: zipkin
+  template:
+    metadata:
+      annotations:
+        consul.hashicorp.com/connect-inject: 'true'
+      labels:
+        app: zipkin
+    spec:
+      containers:
+        - name: zipkin
+          image: 'openzipkin/zipkin-slim'
+          ports:
+            - containerPort: 9411
+              protocol: TCP
