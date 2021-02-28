@@ -1,0 +1,19 @@
+global:
+  name: consul
+  gossipEncryption: 
+    secretName: consul-gossip-encryption-key
+    secretKey: key
+    
+server:
+  replicas: 1
+  storageClass: openebs-jiva-default
+  bootstrapExpect: 1
+ui:
+  service:
+    type: LoadBalancer
+connectInject:
+  enable: true
+client:
+  enable: true
+controller:
+  enabled: true
