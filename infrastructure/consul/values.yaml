@@ -3,7 +3,7 @@ global:
   gossipEncryption: 
     secretName: consul-gossip-encryption-key
     secretKey: key
-    
+  enableConsulNamespaces: true
 server:
   replicas: 1
   storageClass: openebs-jiva-default
@@ -12,7 +12,10 @@ ui:
   service:
     type: LoadBalancer
 connectInject:
-  enable: true
+  enabled: true
+  consulNamespaces:
+    mirroringK8S: true
+    mirroringK8SPrefix: 'k8s-'
 client:
   enable: true
 controller:
