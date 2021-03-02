@@ -12,7 +12,7 @@ spec:
         - containerPort: 9001
           name: http
   serviceAccountName: counting
---
+---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
