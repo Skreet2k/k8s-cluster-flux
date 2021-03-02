@@ -13,8 +13,6 @@ spec:
       app: camunda
   template:
     metadata:
-      annotations:
-        consul.hashicorp.com/connect-inject: 'true'
       labels:
         app: camunda
     spec:
