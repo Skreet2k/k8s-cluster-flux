@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: config-server
+  labels:
+    app: config-server
+  namespace: config-server
+spec:
+  selector:
+    app: config-server
+  ports:
+  - protocol: TCP
+    port: 8888
+    targetPort: 8888
+  type: LoadBalancer

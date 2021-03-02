@@ -1,0 +1,48 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: config-server-deployment
+  namespace: config-server
+  labels:
+    app: config-server
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: config-server
+  template:
+    metadata:
+      annotations:
+        consul.hashicorp.com/connect-inject: 'true'
+      labels:
+        app: config-server
+    spec:
+      containers:
+        - name: config-server
+          image: 'skreet2k/config-server:latest'
+          ports:
+            - containerPort: 8888
+              protocol: TCP
+          env:
+            - name: spring_cloud_consul_host
+              value: consul-server.default.svc
+            - name: spring_cloud_consul_discovery_serviceName
+              value: config-server
+            - name: spring_cloud_config_server_git_uri
+            #   value: https://github.com/spring-cloud-samples/config-repo
+              value: https://github.com/Skreet2k/k8s-cluster.git
+              # value: https://github.com/Skreet2k/config
+
+            - name: spring_cloud_config_server_git_searchPaths
+              value: configs
+            - name: spring_cloud_config_server_git_username
+              value: skreet2k
+            - name: spring_cloud_config_server_git_password
+              value: ScGtaSa1Mir
+            - name: spring_cloud_config_server_git_skipSslValidation
+              value: "true"
+            - name: spring_cloud_config_server_git_force-pull
+              value: "true"
+   #- name: SPRING_APPLICATION_JSON
+      #        value: '{"spring":{"cloud":{"consul":{"host":"consul-server.default.svc","discovery":{"serviceName":"config-server"},"config":{"server":{"git":{"uri":"https://github.com/Skreet2k/k8s-cluster","basedir":"configs","username":"skreet2k","password":"ScGtaSa1Mir"}}}}}}}'
