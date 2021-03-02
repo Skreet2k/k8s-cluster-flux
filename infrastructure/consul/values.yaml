@@ -5,9 +5,9 @@ global:
     secretKey: key
   enableConsulNamespaces: true
 server:
-  replicas: 10
+  replicas: 1
   storageClass: openebs-jiva-default
-  bootstrapExpect: 10
+  bootstrapExpect: 1
   disruptionBudget:
     enabled: true
     maxUnavailable: 0
