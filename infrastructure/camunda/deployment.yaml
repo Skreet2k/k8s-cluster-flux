@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: camunda-deployment
+  namespace: camunda
+  labels:
+    app: camunda
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: camunda
+  template:
+    metadata:
+      annotations:
+        consul.hashicorp.com/connect-inject: 'true'
+      labels:
+        app: camunda
+    spec:
+      containers:
+        - name: camunda
+          image: 'camunda/camunda-bpm-platform:latest'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
