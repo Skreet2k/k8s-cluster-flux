@@ -17,6 +17,8 @@ ui:
 connectInject:
   enabled: true
   default: false
+  consulNamespaces:
+    consulDestinationNamespace: "consul
 client:
   enable: true
 controller:
