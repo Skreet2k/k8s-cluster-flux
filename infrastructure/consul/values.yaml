@@ -5,9 +5,12 @@ global:
     secretKey: key
   enableConsulNamespaces: true
 server:
-  replicas: 1
+  replicas: 2
   storageClass: openebs-jiva-default
   bootstrapExpect: 1
+  disruptionBudget:
+    enabled: true
+    maxUnavailable: 0
 ui:
   service:
     type: LoadBalancer
