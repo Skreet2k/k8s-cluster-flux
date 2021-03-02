@@ -5,6 +5,8 @@ metadata:
   namespace: camunda
   labels:
     app: camunda
+  annotations:
+    consul.hashicorp.com/connect-service-upstreams: counting:9001
 spec:
   replicas: 1
   revisionHistoryLimit: 0
