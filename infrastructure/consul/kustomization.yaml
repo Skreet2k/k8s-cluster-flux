@@ -4,6 +4,7 @@ namespace: consul
 resources:
   - namespace.yaml
   - release.yaml
+  - secret.yaml
 configMapGenerator:
   - name: consul-values
     files:
