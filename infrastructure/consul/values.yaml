@@ -3,22 +3,16 @@ global:
   gossipEncryption: 
     secretName: consul-gossip-encryption-key
     secretKey: key
-  enableConsulNamespaces: true
 server:
   replicas: 1
   storageClass: openebs-jiva-default
   bootstrapExpect: 1
-  disruptionBudget:
-    enabled: true
-    maxUnavailable: 0
 ui:
   service:
     type: LoadBalancer
 connectInject:
   enabled: true
   default: false
-  consulNamespaces:
-    consulDestinationNamespace: "consul"
 client:
   enable: true
 controller:
