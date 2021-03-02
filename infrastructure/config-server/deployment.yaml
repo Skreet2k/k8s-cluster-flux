@@ -26,7 +26,7 @@ spec:
               protocol: TCP
           env:
             - name: spring_cloud_consul_host
-              value: consul-server.default.svc
+              value: consul-server.consul.svc
             - name: spring_cloud_consul_discovery_serviceName
               value: config-server
             - name: spring_cloud_config_server_git_uri
