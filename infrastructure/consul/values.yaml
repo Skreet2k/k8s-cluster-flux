@@ -16,6 +16,7 @@ ui:
     type: LoadBalancer
 connectInject:
   enabled: true
+  default: true
   consulNamespaces:
     mirroringK8S: true
     mirroringK8SPrefix: 'k8s-'
