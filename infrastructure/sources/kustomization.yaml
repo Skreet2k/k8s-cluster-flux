@@ -4,3 +4,4 @@ namespace: flux-system
 resources:
   - hashicorp.yaml
   - openebs.yaml
+  - zeebe.yaml

@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: zeebe
+  namespace: zeebe
+spec:
+  releaseName: zeebe
+  chart:
+    spec:
+      chart: zeebe-cluster-helm
+      sourceRef:
+        kind: HelmRepository
+        name: zeebe
+        namespace: flux-system
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: zeebe-values

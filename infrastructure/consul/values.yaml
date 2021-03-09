@@ -7,6 +7,9 @@ server:
   replicas: 1
   storageClass: openebs-jiva-default
   bootstrapExpect: 1
+  exposeGossipAndRPCPorts: true
+    serflan:
+      port: 9301
 ui:
   service:
     type: LoadBalancer
@@ -15,5 +18,6 @@ connectInject:
   default: false
 client:
   enable: true
+  exposeGossipPorts: true
 controller:
   enabled: true
