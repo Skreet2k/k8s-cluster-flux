@@ -8,12 +8,19 @@ elasticsearch:
         storage: 5Gi
   resources:
     requests:
-      cpu: "100m"
-      memory: "512M"
+      cpu: 100m
+      memory: 1Gi
     limits:
-      cpu: "1000m"
-      memory: "512M"
+      cpu: 1000m
+      memory: 1Gi
   replicas: 1
   minimumMasterNodes: 1
 clusterSize: 1
 partitionCount: 1
+resources:
+  requests:
+    cpu: 100m
+    memory: 1Gi
+  limits:
+    cpu: 1000m
+    memory: 1Gi
