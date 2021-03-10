@@ -10,4 +10,4 @@ resources:
   - openebs
   - flannel
   - dashboard
-#- zeebe
+  - zeebe
