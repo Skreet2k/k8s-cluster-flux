@@ -15,8 +15,6 @@ elasticsearch:
       memory: 2Gi
   replicas: 1
   minimumMasterNodes: 1
-clusterSize: 1
-partitionCount: 1
 resources:
   requests:
     cpu: 100m
