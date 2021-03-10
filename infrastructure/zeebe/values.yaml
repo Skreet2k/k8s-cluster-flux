@@ -2,6 +2,7 @@ pvcStorageClassName: openebs-jiva-default
 elasticsearch:
   enabled: true
   volumeClaimTemplate: 
+    storageClassName: openebs-jiva-default
     resources:
       requests:
         storage: 5Gi
