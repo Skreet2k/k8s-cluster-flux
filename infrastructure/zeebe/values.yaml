@@ -5,14 +5,14 @@ elasticsearch:
     storageClassName: openebs-jiva-default
     resources:
       requests:
-        storage: 5Gi
+        storage: 10Gi
   resources:
     requests:
       cpu: 100m
-      memory: 1Gi
+      memory: 2Gi
     limits:
       cpu: 1000m
-      memory: 1Gi
+      memory: 2Gi
   replicas: 1
   minimumMasterNodes: 1
 clusterSize: 1
