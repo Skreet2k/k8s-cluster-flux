@@ -9,7 +9,7 @@ elasticsearch:
   resources:
     requests:
       cpu: 100m
-      memory: 2Gi
+      memory: 1Gi
     limits:
       cpu: 1000m
       memory: 2Gi
@@ -18,7 +18,7 @@ elasticsearch:
 resources:
   requests:
     cpu: 100m
-    memory: 1Gi
+    memory: 512M
   limits:
     cpu: 1000m
     memory: 1Gi
