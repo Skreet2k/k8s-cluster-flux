@@ -1,1 +1,11 @@
 pvcStorageClassName: openebs-jiva-default
+elasticsearch:
+  enabled: true
+  volumeClaimTemplate: 
+    resources:
+      requests:
+        storage: 5Gi
+  replicas: 1
+  minimumMasterNodes: 1
+clusterSize: 1
+partitionCount: 1
