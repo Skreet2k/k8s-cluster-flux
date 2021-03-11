@@ -17,7 +17,7 @@ connectInject:
   enabled: false
   default: false
 client:
-  enable: false
+  enable: true
   exposeGossipPorts: false
 controller:
-  enabled: false
+  enabled: true

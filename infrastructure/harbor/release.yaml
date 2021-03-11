@@ -11,6 +11,7 @@ spec:
         kind: HelmRepository
         name: harbor
         namespace: flux-system
+    version: 1.4.6
   interval: 1h0m0s
   install:
     remediation:
