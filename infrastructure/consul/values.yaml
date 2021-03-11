@@ -14,10 +14,10 @@ ui:
   service:
     type: LoadBalancer
 connectInject:
-  enabled: true
+  enabled: false
   default: false
 client:
-  enable: true
-  exposeGossipPorts: true
+  enable: false
+  exposeGossipPorts: false
 controller:
-  enabled: true
+  enabled: false
