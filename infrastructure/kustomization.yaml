@@ -11,4 +11,5 @@ resources:
   - flannel
   - dashboard
   - harbor
+  - postgresql
   #- zeebe

@@ -6,4 +6,4 @@ resources:
   - openebs.yaml
   - zeebe.yaml
   - harbor.yaml
-  
+  - bitnami
