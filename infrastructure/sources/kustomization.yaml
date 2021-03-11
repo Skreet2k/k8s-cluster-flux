@@ -5,3 +5,5 @@ resources:
   - hashicorp.yaml
   - openebs.yaml
   - zeebe.yaml
+  - harbor.yaml
+  

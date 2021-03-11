@@ -1,0 +1,19 @@
+expose:
+  type: loadBalancer
+  tls:
+    enabled: false
+persistence:
+  persistentVolumeClaim:
+    registry: 
+      storageClass: openebs-jiva-default
+    chartmuseum: 
+      storageClass: openebs-jiva-default
+    jobservice: 
+      storageClass: openebs-jiva-default
+    database: 
+      storageClass: openebs-jiva-default
+    redis: 
+      storageClass: openebs-jiva-default
+    trivy: 
+      storageClass: openebs-jiva-default
+externalURL: https://harbor.onebranch.dev
