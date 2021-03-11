@@ -10,6 +10,6 @@ resources:
   - openebs
   - flannel
   - dashboard
-  - harbor
+#  - harbor
   - postgresql
   #- zeebe
