@@ -4,6 +4,4 @@ persistence:
   storageClass: openebs-jiva-default
 global: 
   postgresql: 
-    postgresqlDatabase: admin
-    postgresqlUsername: admin
     postgresqlPassword: Qqwerty1!
