@@ -17,3 +17,7 @@ persistence:
     trivy: 
       storageClass: openebs-jiva-default
 externalURL: https://harbor.onebranch.dev
+trivy: 
+  enabled: false
+chartmuseum: 
+  enabled: false
