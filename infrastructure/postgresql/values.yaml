@@ -2,4 +2,8 @@ service:
   type: LoadBalancer
 persistence:
   storageClass: openebs-jiva-default
-postgresqlPassword: Qqwerty1!
+global: 
+  postgresql: 
+    postgresqlDatabase: admin
+    postgresqlUsername: admin
+    postgresqlPassword: Qqwerty1!
