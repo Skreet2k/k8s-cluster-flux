@@ -23,3 +23,10 @@ chartmuseum:
   enabled: false
 notary: 
   enabled: false
+database: 
+  type: external
+  external:
+    host: postgresql.postgresql.svc.cluster.local
+    port: 5432
+    username: postgre
+    password: Qqwerty1!
