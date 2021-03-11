@@ -28,5 +28,5 @@ database:
   external:
     host: postgresql.postgresql.svc.cluster.local
     port: 5432
-    username: admin
-    password: Qqwerty1!
+    username: postgres
+    password: SD6rnWRpEh
