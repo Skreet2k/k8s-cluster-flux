@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: dapr-test
-          image: 'skreet2k/dapr-testr:latest'
+          image: 'skreet2k/dapr-test:latest'
           ports:
             - containerPort: 80
               protocol: TCP
