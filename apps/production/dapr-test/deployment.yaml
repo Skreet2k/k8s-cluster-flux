@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: dapr-test
+  namespace: dapr
+  labels:
+    app: dapr-test
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: dapr-test
+  template:
+    metadata:
+      labels:
+        app: dapr-test
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-port: "80"
+        dapr.io/app-id: "dapr-test"
+    spec:
+      containers:
+        - name: dapr-test
+          image: 'skreet2k/dapr-testr:latest'
+          ports:
+            - containerPort: 80
+              protocol: TCP
