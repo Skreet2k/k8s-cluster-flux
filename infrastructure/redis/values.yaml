@@ -6,5 +6,7 @@ cluster:
 master:
   persistence:
     enabled: false
+  service: 
+    type: LoadBalancer
 global: 
   storageClass: openebs-jiva-default
