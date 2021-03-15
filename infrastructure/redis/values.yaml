@@ -6,3 +6,5 @@ cluster:
 master:
   persistence:
     enabled: false
+global: 
+  storageClass: openebs-jiva-default
