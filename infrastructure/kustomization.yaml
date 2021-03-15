@@ -13,4 +13,5 @@ resources:
   - harbor
   - postgresql
   - redis
+  - dapr
   #- zeebe
